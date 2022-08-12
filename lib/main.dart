@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Chat Fultter',
       theme: themeDataLight(context),
       darkTheme: themeDataDark(context),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       home: const WelcomeScreen(),
     );

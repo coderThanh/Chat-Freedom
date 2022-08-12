@@ -1,7 +1,7 @@
-import 'package:chat_light_dark/views/widgets/check_condition_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/theme_color.dart';
+import 'check_condition_widget.dart';
 
 class ButtonColor extends StatelessWidget {
   const ButtonColor({
@@ -15,6 +15,8 @@ class ButtonColor extends StatelessWidget {
     this.isIconRight = true,
     this.iconSize = 24,
     this.radius = 100,
+    this.padding,
+    this.height,
   }) : super(key: key);
 
   final VoidCallback onPress;
@@ -26,19 +28,21 @@ class ButtonColor extends StatelessWidget {
   final Color? textColor;
   final bool isIconRight;
   final double radius;
+  final double? height;
+  final EdgeInsets? padding;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPress,
       style: Theme.of(context).textButtonTheme.style?.copyWith(
-            backgroundColor:
-                MaterialStateProperty.all(background ?? ThemeColor.primary),
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(radius)))),
-            padding: MaterialStateProperty.all(
-                const EdgeInsets.symmetric(vertical: 13, horizontal: 15)),
-          ),
+          backgroundColor:
+              MaterialStateProperty.all(background ?? ThemeColor.primary),
+          shape: MaterialStateProperty.all(RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(radius)))),
+          padding: MaterialStateProperty.all(padding ??
+              const EdgeInsets.symmetric(vertical: 13, horizontal: 15)),
+          minimumSize: MaterialStateProperty.all(Size(0, height ?? 0))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

@@ -1,10 +1,12 @@
+import 'package:chat_light_dark/views/screens/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../models/theme_color.dart';
 import '../../../../models/theme_const.dart';
 import '../../../../models/theme_icon.dart';
-import '../../../widgets/button_color.dart';
+import '../../../widgets/button_color_widget.dart';
+import '../../signin/sigin_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -35,14 +37,34 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.15),
             ButtonColor(
-              onPress: () {},
+              onPress: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SigninScreen()));
+              },
               text: 'Sign in',
             ),
             SizedBox(height: ThemeConst.padding * 1.2),
             ButtonColor(
-              onPress: () {},
-              text: 'Sign in',
+              onPress: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SignupScreen()));
+              },
+              text: 'Sign up',
               background: ThemeColor.secondary,
+            ),
+            SizedBox(height: ThemeConst.padding * 2),
+            GestureDetector(
+              child: Text(
+                'Skip and visit',
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      decoration: TextDecoration.underline,
+                    ),
+              ),
             ),
           ],
         ),
