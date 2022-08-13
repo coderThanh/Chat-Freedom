@@ -18,20 +18,20 @@ class BodyForm extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const InputColor(
+          InputColor(
             hintText: 'Phone',
             maxLength: 15,
-            height: 50,
+            height: ThemeConst.inputHeight,
             textInputType: TextInputType.number,
           ),
           SizedBox(
             height: ThemeConst.padding,
           ),
-          const InputColor(
+          InputColor(
             hintText: 'Password',
             isPassword: true,
             maxLength: 100,
-            height: 50,
+            height: ThemeConst.inputHeight,
           ),
           SizedBox(
             height: ThemeConst.padding,
@@ -39,7 +39,7 @@ class BodyForm extends StatelessWidget {
           ButtonColor(
             onPress: () {},
             text: 'Sigin in',
-            height: 50,
+            height: ThemeConst.inputHeight,
           ),
         ],
       ),

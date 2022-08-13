@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'models/theme_data.dart';
-import 'views/screens/welcome/welcome_screen.dart';
+import 'models/theme_route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
       darkTheme: themeDataDark(context),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: const WelcomeScreen(),
+      initialRoute: ThemeRoute.welcome,
+      routes: ThemeRoute.routes,
     );
   }
 }

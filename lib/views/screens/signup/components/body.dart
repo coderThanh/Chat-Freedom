@@ -3,29 +3,32 @@ import 'package:flutter/material.dart';
 import '../../../../models/theme_const.dart';
 import '../../../widgets/logo_welcome.dart';
 import 'body_form.dart';
-import 'body_text_more.dart';
+import 'body_text.dart';
 
-class Body extends StatelessWidget {
-  const Body({
+class BodySignUp extends StatelessWidget {
+  const BodySignUp({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
+
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: ThemeConst.padding),
       width: double.infinity,
       height: size.height,
+      padding: EdgeInsets.symmetric(horizontal: ThemeConst.padding),
       child: SingleChildScrollView(
-        padding: EdgeInsets.only(bottom: ThemeConst.padding * 2),
+        padding: EdgeInsets.only(bottom: ThemeConst.padding),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const LogoWelcome(),
-            Text('Sign in', style: Theme.of(context).textTheme.titleMedium),
-            const BodyForm(),
-            const BodyTextMore(),
+            Text(
+              'Sign up',
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            const BodyFormSignUp(),
+            const BodyTextSignup(),
           ],
         ),
       ),

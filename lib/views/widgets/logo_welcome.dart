@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../models/theme_icon.dart';
+import '../../models/theme_icon.dart';
 
-class BodyLogo extends StatelessWidget {
-  const BodyLogo({
+class LogoWelcome extends StatelessWidget {
+  const LogoWelcome({
     Key? key,
   }) : super(key: key);
 

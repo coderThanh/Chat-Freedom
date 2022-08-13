@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../models/theme_const.dart';
+import '../../../../models/theme_route.dart';
 import '../../../widgets/button_text_widget.dart';
-import '../../login/login_screen.dart';
 import 'body_description.dart';
 
 class Body extends StatelessWidget {
@@ -35,10 +35,8 @@ class Body extends StatelessWidget {
                   text: 'Skip',
                   iconData: Icons.navigate_next_outlined,
                   onPress: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginScreen()));
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, ThemeRoute.login, (route) => false);
                   },
                 ),
               ],
