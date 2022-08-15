@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../models/theme_const.dart';
+import '../../../../models/theme_route.dart';
 
 AppBar appBarChats(BuildContext context) {
   return AppBar(
@@ -31,7 +32,7 @@ AppBar appBarChats(BuildContext context) {
         child: IconButton(
           splashRadius: 22,
           padding: const EdgeInsets.all(0),
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, ThemeRoute.search),
           icon: const Icon(
             Icons.search,
           ),

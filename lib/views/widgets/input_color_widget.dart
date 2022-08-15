@@ -1,3 +1,4 @@
+import 'package:chat_light_dark/views/widgets/check_condition_widget.dart';
 import 'package:flutter/material.dart';
 
 class InputColor extends StatefulWidget {
@@ -14,19 +15,31 @@ class InputColor extends StatefulWidget {
     this.isPassword = false,
     this.textInputType,
     this.height,
+    this.padding,
+    this.textSize = 16,
+    this.iconSize = 20,
+    this.iconColor,
+    this.iconData,
+    this.textInputAction,
   }) : super(key: key);
 
+  final void Function(String)? onChanged;
+  final void Function(String)? onSubmitted;
   final TextEditingController? controller;
   final double radius;
   final Color? backgroundColor;
-  final Color? color;
-  final String? hintText;
   final int? maxLength;
-  final void Function(String)? onChanged;
-  final void Function(String)? onSubmitted;
-  final bool isPassword;
   final TextInputType? textInputType;
+  final bool isPassword;
+  final EdgeInsets? padding;
   final double? height;
+  final String? hintText;
+  final double textSize;
+  final Color? color;
+  final IconData? iconData;
+  final Color? iconColor;
+  final double iconSize;
+  final TextInputAction? textInputAction;
 
   @override
   State<InputColor> createState() => _InputColorState();
@@ -45,7 +58,8 @@ class _InputColorState extends State<InputColor> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: widget.padding ??
+          const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       decoration: BoxDecoration(
         color: widget.backgroundColor ?? Theme.of(context).splashColor,
         borderRadius: BorderRadius.all(Radius.circular(widget.radius)),
@@ -58,18 +72,19 @@ class _InputColorState extends State<InputColor> {
         onSubmitted: widget.onSubmitted,
         maxLength: widget.maxLength,
         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              fontSize: 16,
+              fontSize: widget.textSize,
               color:
                   widget.color ?? Theme.of(context).textTheme.bodyMedium?.color,
             ),
         obscureText: obscureText,
         keyboardType: widget.textInputType,
+        textInputAction: widget.textInputAction,
         decoration: InputDecoration(
           isDense: true,
           hintText: widget.hintText,
           counterText: '',
           hintStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                fontSize: 16,
+                fontSize: widget.textSize,
                 color: widget.color?.withOpacity(0.5) ??
                     Theme.of(context)
                         .textTheme
@@ -88,8 +103,8 @@ class _InputColorState extends State<InputColor> {
                     padding: const EdgeInsets.only(left: 10),
                     child: Icon(
                       obscureText ? Icons.remove_red_eye : Icons.visibility_off,
-                      size: 20,
-                      color: widget.color ??
+                      size: widget.iconSize,
+                      color: widget.iconColor ??
                           Theme.of(context)
                               .textTheme
                               .bodyMedium
@@ -100,7 +115,24 @@ class _InputColorState extends State<InputColor> {
                 )
               : null,
           suffixIconConstraints: const BoxConstraints.tightFor(),
-          suffixIconColor: widget.color ?? Colors.red,
+          prefixIcon: CheckCondition(
+            exception: widget.iconData != null,
+            ifTrue: Padding(
+              padding: const EdgeInsets.only(right: 5),
+              child: Icon(
+                widget.iconData,
+                size: widget.iconSize,
+                color: widget.iconColor ??
+                    Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.color
+                        ?.withOpacity(0.5),
+              ),
+            ),
+          ),
+          prefixIconConstraints:
+              const BoxConstraints(minWidth: 0, minHeight: 0),
         ),
       ),
     );
