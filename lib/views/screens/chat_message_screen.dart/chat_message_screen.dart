@@ -21,7 +21,7 @@ class ChatMessageScreen extends StatelessWidget {
       body: BodyChatMessage(
         chat: chat,
       ),
-      bottomNavigationBar: BottomNavigationMainTheme(current: 1),
+      bottomNavigationBar: const BottomNavigationMainTheme(current: 1),
     );
   }
 }

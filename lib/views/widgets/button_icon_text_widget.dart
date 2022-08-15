@@ -48,7 +48,7 @@ class ButtonIconText extends StatelessWidget {
 
     final Text textWidget = Text(
       text.toString(),
-      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
             fontSize: textSize,
             color: textColor,
             fontWeight: FontWeight.w500,

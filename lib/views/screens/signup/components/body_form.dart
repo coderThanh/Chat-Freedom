@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../models/theme_const.dart';
 import '../../../../models/theme_route.dart';
-import '../../../widgets/button_color_widget.dart';
+import '../../../widgets/button_icon_text_widget.dart';
 import '../../../widgets/input_color_widget.dart';
 
 class BodyFormSignUp extends StatelessWidget {
@@ -41,11 +41,16 @@ class BodyFormSignUp extends StatelessWidget {
           height: ThemeConst.inputHeight,
         ),
         SizedBox(height: ThemeConst.padding * 0.8),
-        ButtonColor(
+        ButtonIconText(
           onPress: () => Navigator.pushNamedAndRemoveUntil(
               context, ThemeRoute.chats, (route) => false),
           text: 'Sign up',
           height: ThemeConst.inputHeight,
+          background: Theme.of(context).primaryColor,
+          textColor: Colors.white,
+          textSize: 16,
+          radius: 100,
+          mainAxisAlignment: MainAxisAlignment.center,
         ),
       ],
     );

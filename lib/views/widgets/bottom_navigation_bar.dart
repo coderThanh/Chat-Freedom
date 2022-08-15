@@ -65,6 +65,7 @@ class BottomNavigationMainTheme extends StatelessWidget {
                 onPress: listMenuItem[index]['onPress'],
                 iconData: listMenuItem[index]['iconData'],
                 text: listMenuItem[index]['text'],
+                textSize: 13,
                 textColor: Theme.of(context)
                     .textTheme
                     .bodyMedium

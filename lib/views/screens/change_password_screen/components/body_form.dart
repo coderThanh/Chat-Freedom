@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../models/theme_const.dart';
-import '../../../widgets/button_color_widget.dart';
+import '../../../widgets/button_icon_text_widget.dart';
 import '../../../widgets/input_color_widget.dart';
 
 class BodyFormChangePass extends StatelessWidget {
@@ -34,9 +34,13 @@ class BodyFormChangePass extends StatelessWidget {
         SizedBox(
           height: ThemeConst.padding,
         ),
-        ButtonColor(
+        ButtonIconText(
           onPress: () {},
           text: 'Change Password',
+          background: Theme.of(context).primaryColor,
+          textColor: Colors.white,
+          mainAxisAlignment: MainAxisAlignment.center,
+          radius: 100,
           height: ThemeConst.inputHeight,
         ),
       ],

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../models/theme_const.dart';
 import '../../../../models/theme_route.dart';
-import '../../../widgets/button_text_widget.dart';
+import '../../../widgets/button_icon_text_widget.dart';
 import 'body_description.dart';
 
 class Body extends StatelessWidget {
@@ -31,9 +31,12 @@ class Body extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ButtonText(
+                ButtonIconText(
                   text: 'Skip',
                   iconData: Icons.navigate_next_outlined,
+                  iconReverse: true,
+                  height: ThemeConst.inputHeight,
+                  textSize: 16,
                   onPress: () {
                     Navigator.pushNamedAndRemoveUntil(
                         context, ThemeRoute.login, (route) => false);

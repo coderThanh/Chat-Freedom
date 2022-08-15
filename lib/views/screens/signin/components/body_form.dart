@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../models/theme_const.dart';
-import '../../../widgets/button_color_widget.dart';
+import '../../../widgets/button_icon_text_widget.dart';
 import '../../../widgets/input_color_widget.dart';
 
 class BodyForm extends StatelessWidget {
@@ -36,10 +36,15 @@ class BodyForm extends StatelessWidget {
           SizedBox(
             height: ThemeConst.padding,
           ),
-          ButtonColor(
+          ButtonIconText(
             onPress: () {},
             text: 'Sigin in',
             height: ThemeConst.inputHeight,
+            background: Theme.of(context).primaryColor,
+            textColor: Colors.white,
+            textSize: 16,
+            mainAxisAlignment: MainAxisAlignment.center,
+            radius: 100,
           ),
         ],
       ),
