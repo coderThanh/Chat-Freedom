@@ -9,6 +9,7 @@ class ThemeColor {
   static Color surface = const Color(0xFFFFFFFF);
   static Color background = const Color(0xFFFFFFFF);
   static Color splash = Colors.black.withOpacity(0.08);
+  static Color shadown = Colors.black.withOpacity(0.06);
 }
 
 class ThemeColorDark extends ThemeColor {
@@ -20,4 +21,5 @@ class ThemeColorDark extends ThemeColor {
   static Color surface = const Color(0xFF1D1D35);
   static Color background = const Color(0xFF1D1D35);
   static Color splash = Colors.white.withOpacity(0.08);
+  static Color shadown = Colors.black.withOpacity(0.2);
 }

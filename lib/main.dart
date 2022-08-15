@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Chat Fultter',
       theme: themeDataLight(context),
       darkTheme: themeDataDark(context),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       initialRoute: ThemeRoute.welcome,
       routes: ThemeRoute.routes,

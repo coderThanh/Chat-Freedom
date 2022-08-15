@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../views/screens/chat_message_screen.dart/middleware_chat_message.dart';
 import '../views/screens/welcome/welcome_screen.dart';
 import '../views/screens/change_password_screen/change_password_screen.dart';
 import '../views/screens/chats/chats_screen.dart';
@@ -16,6 +17,7 @@ class ThemeRoute {
   static String forgotPassword = '/forgot-password';
   static String changPassword = '/change-password';
   static String chats = '/';
+  static String chatMessage = '/chat-message';
 
   static Map<String, WidgetBuilder> routes = {
     welcome: (context) => const WelcomeScreen(),
@@ -25,5 +27,6 @@ class ThemeRoute {
     forgotPassword: (context) => const ForgotPassWordScreen(),
     changPassword: (context) => const ChangePasswordScreen(),
     chats: (context) => const ChatsScreen(),
+    chatMessage: (context) => const MiddlewareChatMessageScreen(),
   };
 }

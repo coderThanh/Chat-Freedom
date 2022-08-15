@@ -5,6 +5,8 @@ import 'theme_text.dart';
 
 ThemeData themeDataLight(BuildContext context) {
   return ThemeData.light().copyWith(
+    shadowColor: ThemeColor.shadown,
+    backgroundColor: ThemeColor.background,
     scaffoldBackgroundColor: ThemeColor.background,
     appBarTheme: appBarTheme(),
     primaryColor: ThemeColor.primary,
@@ -15,7 +17,8 @@ ThemeData themeDataLight(BuildContext context) {
         primary: ThemeColor.splash,
         surfaceTintColor: ThemeColor.splash,
         onSurface: ThemeColor.splash,
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        minimumSize: const Size(0, 0),
         elevation: 0,
       ),
     ),
@@ -28,7 +31,9 @@ ThemeData themeDataLight(BuildContext context) {
 
 ThemeData themeDataDark(BuildContext context) {
   return ThemeData.dark().copyWith(
+    shadowColor: ThemeColorDark.shadown,
     scaffoldBackgroundColor: ThemeColorDark.background,
+    backgroundColor: ThemeColorDark.background,
     appBarTheme: appBarTheme(),
     primaryColor: ThemeColorDark.primary,
     splashColor: ThemeColorDark.splash,
@@ -38,7 +43,8 @@ ThemeData themeDataDark(BuildContext context) {
         primary: ThemeColorDark.splash,
         surfaceTintColor: ThemeColorDark.splash,
         onSurface: ThemeColorDark.splash,
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        minimumSize: const Size(0, 0),
         elevation: 0,
       ),
     ),
@@ -52,4 +58,5 @@ ThemeData themeDataDark(BuildContext context) {
 AppBarTheme appBarTheme() => AppBarTheme(
       centerTitle: false,
       elevation: 0,
+      backgroundColor: ThemeColor.primary,
     );
