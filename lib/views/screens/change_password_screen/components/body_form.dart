@@ -38,6 +38,7 @@ class BodyFormChangePass extends StatelessWidget {
           onPress: () {},
           text: 'Change Password',
           background: Theme.of(context).primaryColor,
+          width: double.infinity,
           textColor: Colors.white,
           mainAxisAlignment: MainAxisAlignment.center,
           radius: 100,

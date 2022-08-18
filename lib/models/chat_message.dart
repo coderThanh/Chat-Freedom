@@ -29,6 +29,19 @@ List<ChatMessage> demeChatMessages = [
     isSender: false,
   ),
   const ChatMessage(
+    text:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    type: ChatMessageType.text,
+    status: ChatMessageStatus.viewed,
+    isSender: false,
+  ),
+  const ChatMessage(
+    text: "",
+    type: ChatMessageType.image,
+    status: ChatMessageStatus.viewed,
+    isSender: false,
+  ),
+  const ChatMessage(
     text: "Hello, How are you?",
     type: ChatMessageType.text,
     status: ChatMessageStatus.viewed,
@@ -43,6 +56,13 @@ List<ChatMessage> demeChatMessages = [
   const ChatMessage(
     text: "",
     type: ChatMessageType.video,
+    status: ChatMessageStatus.viewed,
+    isSender: true,
+  ),
+  const ChatMessage(
+    text:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    type: ChatMessageType.text,
     status: ChatMessageStatus.viewed,
     isSender: true,
   ),

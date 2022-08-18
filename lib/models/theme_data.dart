@@ -12,6 +12,9 @@ ThemeData themeDataLight(BuildContext context) {
     primaryColor: ThemeColor.primary,
     splashColor: ThemeColor.splash,
     highlightColor: ThemeColor.splash,
+    colorScheme: Theme.of(context).colorScheme.copyWith(
+          onBackground: ThemeColor.text,
+        ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         primary: ThemeColor.splash,
@@ -19,6 +22,7 @@ ThemeData themeDataLight(BuildContext context) {
         onSurface: ThemeColor.splash,
         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
         minimumSize: const Size(0, 0),
+        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         elevation: 0,
       ),
     ),
@@ -38,6 +42,9 @@ ThemeData themeDataDark(BuildContext context) {
     primaryColor: ThemeColorDark.primary,
     splashColor: ThemeColorDark.splash,
     highlightColor: ThemeColorDark.splash,
+    colorScheme: Theme.of(context).colorScheme.copyWith(
+          onBackground: ThemeColorDark.text,
+        ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         primary: ThemeColorDark.splash,
@@ -46,6 +53,7 @@ ThemeData themeDataDark(BuildContext context) {
         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
         minimumSize: const Size(0, 0),
         elevation: 0,
+        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
       ),
     ),
     textTheme: textTheme(context).apply(

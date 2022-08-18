@@ -14,7 +14,8 @@ class ButtonIconText extends StatelessWidget {
     this.textColor,
     this.iconReverse = false,
     this.radius = 10,
-    this.height = 0,
+    this.height,
+    this.width,
     this.padding,
     this.textSize,
     this.mainAxisAlignment = MainAxisAlignment.start,
@@ -33,7 +34,8 @@ class ButtonIconText extends StatelessWidget {
   final bool isHorizontal;
   final Color? background;
   final double radius;
-  final double height;
+  final double? height;
+  final double? width;
   final EdgeInsets? padding;
   final MainAxisAlignment mainAxisAlignment;
   final CrossAxisAlignment crossAxisAlignment;
@@ -60,11 +62,14 @@ class ButtonIconText extends StatelessWidget {
       style: Theme.of(context).textButtonTheme.style?.copyWith(
             backgroundColor: MaterialStateProperty.all(background),
             padding: MaterialStateProperty.all(padding),
-            minimumSize: MaterialStateProperty.all(Size(0, height)),
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(radius))),
             ),
+            fixedSize: MaterialStateProperty.all(
+                (width != null && height != null)
+                    ? Size(width!, height!)
+                    : null),
           ),
       child: CheckCondition(
         exception: isHorizontal,
@@ -75,7 +80,7 @@ class ButtonIconText extends StatelessWidget {
             CheckCondition(
               exception: !iconReverse && iconData != null,
               ifTrue: Padding(
-                padding: const EdgeInsets.only(right: 5),
+                padding: EdgeInsets.only(right: (text != null) ? 5 : 0),
                 child: iconWidget,
               ),
             ),
@@ -86,7 +91,7 @@ class ButtonIconText extends StatelessWidget {
             CheckCondition(
               exception: iconReverse && iconData != null,
               ifTrue: Padding(
-                padding: const EdgeInsets.only(left: 5),
+                padding: EdgeInsets.only(left: (text != null) ? 5 : 0),
                 child: iconWidget,
               ),
             ),
@@ -99,7 +104,7 @@ class ButtonIconText extends StatelessWidget {
             CheckCondition(
               exception: !iconReverse && iconData != null,
               ifTrue: Padding(
-                padding: const EdgeInsets.only(bottom: 3),
+                padding: EdgeInsets.only(bottom: (text != null) ? 3 : 0),
                 child: iconWidget,
               ),
             ),
@@ -110,7 +115,7 @@ class ButtonIconText extends StatelessWidget {
             CheckCondition(
               exception: iconReverse && iconData != null,
               ifTrue: Padding(
-                padding: const EdgeInsets.only(top: 3),
+                padding: EdgeInsets.only(top: (text != null) ? 3 : 0),
                 child: iconWidget,
               ),
             ),

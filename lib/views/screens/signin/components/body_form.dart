@@ -40,6 +40,7 @@ class BodyForm extends StatelessWidget {
             onPress: () {},
             text: 'Sigin in',
             height: ThemeConst.inputHeight,
+            width: double.infinity,
             background: Theme.of(context).primaryColor,
             textColor: Colors.white,
             textSize: 16,

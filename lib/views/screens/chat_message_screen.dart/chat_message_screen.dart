@@ -1,8 +1,9 @@
-import 'package:chat_light_dark/models/chat.dart';
-import 'package:chat_light_dark/views/widgets/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../../../models/chat.dart';
+import 'components/app_bar.dart';
 import 'components/body.dart';
+import 'components/bottom_navigator.dart';
 
 class ChatMessageScreen extends StatelessWidget {
   const ChatMessageScreen({
@@ -17,11 +18,9 @@ class ChatMessageScreen extends StatelessWidget {
     final Chat chat = args?['chat'];
 
     return Scaffold(
-      appBar: AppBar(),
-      body: BodyChatMessage(
-        chat: chat,
-      ),
-      bottomNavigationBar: const BottomNavigationMainTheme(current: 1),
+      appBar: appBarChatMessage(context, chat: chat),
+      bottomNavigationBar: const BottomNavigatorChatMessageDetail(),
+      body: BodyChatMessage(chat: chat),
     );
   }
 }

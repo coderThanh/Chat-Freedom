@@ -6,6 +6,7 @@ import '../../../../models/theme_route.dart';
 AppBar appBarChats(BuildContext context) {
   return AppBar(
     centerTitle: true,
+    toolbarHeight: ThemeConst.appbarHeight,
     title: Text(
       'Chats',
       style:

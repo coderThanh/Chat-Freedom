@@ -4,4 +4,5 @@ class ThemeConst {
   static double radius = 10;
   static double inputHeight = 50;
   static double textOpacity = 0.72;
+  static double appbarHeight = 60;
 }

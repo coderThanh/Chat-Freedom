@@ -10,7 +10,7 @@ AppBar appBarSearchScreen(BuildContext context) {
 
   return AppBar(
     leading: const SizedBox.shrink(),
-    toolbarHeight: 38,
+    toolbarHeight: 40,
     elevation: 10,
     shadowColor: Colors.black38,
     actions: [
@@ -43,6 +43,7 @@ AppBar appBarSearchScreen(BuildContext context) {
                 radius: 5,
                 textColor: Colors.white,
                 height: 38,
+                width: double.infinity,
               ),
             ),
           ],

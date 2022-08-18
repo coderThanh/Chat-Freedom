@@ -46,6 +46,7 @@ class BodyFormSignUp extends StatelessWidget {
               context, ThemeRoute.chats, (route) => false),
           text: 'Sign up',
           height: ThemeConst.inputHeight,
+          width: double.infinity,
           background: Theme.of(context).primaryColor,
           textColor: Colors.white,
           textSize: 16,

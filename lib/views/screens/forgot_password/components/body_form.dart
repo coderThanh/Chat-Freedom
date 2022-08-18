@@ -37,6 +37,7 @@ class BodyFormForgotPassword extends StatelessWidget {
           textSize: 16,
           mainAxisAlignment: MainAxisAlignment.center,
           radius: 100,
+          width: double.infinity,
           height: ThemeConst.inputHeight,
         ),
         SizedBox(
