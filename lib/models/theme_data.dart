@@ -1,3 +1,4 @@
+import 'package:chat_light_dark/models/theme_const.dart';
 import 'package:flutter/material.dart';
 
 import 'theme_color.dart';
@@ -64,7 +65,8 @@ ThemeData themeDataDark(BuildContext context) {
 }
 
 AppBarTheme appBarTheme() => AppBarTheme(
-      centerTitle: false,
+      toolbarHeight: ThemeConst.appbarHeight,
+      centerTitle: true,
       elevation: 0,
       backgroundColor: ThemeColor.primary,
     );

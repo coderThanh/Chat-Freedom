@@ -1,7 +1,7 @@
-import 'package:chat_light_dark/views/widgets/button_icon_text_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/chat_message.dart';
+import 'button_icon_text_widget.dart';
 
 class BoxMessageDetailContext extends StatelessWidget {
   const BoxMessageDetailContext({

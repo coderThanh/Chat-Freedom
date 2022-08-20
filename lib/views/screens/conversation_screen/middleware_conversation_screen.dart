@@ -1,5 +1,6 @@
-import 'package:chat_light_dark/views/screens/conversation_screen/conversation_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'conversation_screen.dart';
 
 class MiddleWareConverStaionScreen extends StatelessWidget {
   const MiddleWareConverStaionScreen({Key? key}) : super(key: key);

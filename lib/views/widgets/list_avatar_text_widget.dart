@@ -1,29 +1,38 @@
 import 'package:flutter/material.dart';
 
-import '../../models/chat.dart';
 import '../../models/theme_color.dart';
 import '../../models/theme_const.dart';
 import 'check_condition_widget.dart';
 
-class LabelAvatar extends StatelessWidget {
-  const LabelAvatar({
+class ListAvatarText extends StatelessWidget {
+  const ListAvatarText({
     Key? key,
-    required this.chat,
     this.padding,
     this.imageSize = 45,
     this.textColor,
     this.backgroundColor = Colors.transparent,
     this.radius = 5,
     this.onPress,
+    this.isActive = false,
+    required this.assest,
+    required this.title,
+    this.subTitle,
+    this.styleTitle,
+    this.styleSubTitle,
   }) : super(key: key);
 
-  final Chat chat;
   final EdgeInsets? padding;
   final double imageSize;
   final double radius;
   final Color? textColor;
   final Color backgroundColor;
   final VoidCallback? onPress;
+  final bool isActive;
+  final String assest;
+  final String title;
+  final String? subTitle;
+  final TextStyle? styleTitle;
+  final TextStyle? styleSubTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +52,13 @@ class LabelAvatar extends StatelessWidget {
                 alignment: Alignment.center,
                 children: [
                   Image.asset(
-                    chat.image,
+                    assest,
                     fit: BoxFit.cover,
                     width: imageSize,
                     height: imageSize,
                   ),
                   CheckCondition(
-                    exception: chat.isActive,
+                    exception: isActive,
                     ifTrue: Positioned(
                       bottom: 1,
                       right: 1,
@@ -75,21 +84,26 @@ class LabelAvatar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  chat.name,
+                  title,
                   maxLines: 1,
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: textColor ?? Colors.white,
-                        fontWeight: FontWeight.w500,
-                        overflow: TextOverflow.ellipsis,
-                      ),
+                  style: styleTitle ??
+                      Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            color: textColor ?? Colors.white,
+                            fontWeight: FontWeight.w500,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                 ),
-                Opacity(
-                  opacity: ThemeConst.textOpacity,
-                  child: Text(
-                    'Active ${chat.isActive ? '' : chat.time}',
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: textColor ?? Colors.white,
-                        ),
+                CheckCondition(
+                  exception: subTitle != null,
+                  ifTrue: Opacity(
+                    opacity: ThemeConst.textOpacity,
+                    child: Text(
+                      subTitle.toString(),
+                      style: styleSubTitle ??
+                          Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color: textColor ?? Colors.white,
+                              ),
+                    ),
                   ),
                 ),
               ],

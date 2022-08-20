@@ -7,8 +7,14 @@ class MiddlewareChatMessageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late dynamic agrs;
+    if (ModalRoute.of(context)?.settings.arguments != null) {
+      agrs = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+    } else {
+      agrs = <String, dynamic>{};
+    }
     return ChatMessageScreen(
-      args: ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>,
+      args: agrs,
     );
   }
 }

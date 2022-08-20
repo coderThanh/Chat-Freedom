@@ -21,7 +21,7 @@ class ChatMessage extends Equatable {
   List<Object?> get props => [text, isSender, type, status];
 }
 
-List<ChatMessage> demeChatMessages = [
+List<ChatMessage> demoChatMessages = [
   const ChatMessage(
     text: "Hi Sajol,",
     type: ChatMessageType.text,

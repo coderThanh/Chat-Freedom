@@ -22,15 +22,15 @@ class BodyChatMessage extends StatelessWidget {
       ),
       shrinkWrap: true,
       reverse: true,
-      itemCount: demeChatMessages.length,
+      itemCount: demoChatMessages.length,
       separatorBuilder: (BuildContext context, int index) => SizedBox(
         height: ThemeConst.padding,
       ),
       itemBuilder: (context, index) {
-        final int reverseIndex = demeChatMessages.length - 1 - index;
+        final int reverseIndex = demoChatMessages.length - 1 - index;
 
         return BoxMessageDetail(
-          chatMessage: demeChatMessages[reverseIndex],
+          chatMessage: demoChatMessages[reverseIndex],
           chat: chat,
         );
       },

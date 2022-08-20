@@ -18,14 +18,17 @@ class BottomNavigationMainTheme extends StatelessWidget {
       {
         'text': 'Chats',
         'iconData': Icons.chat,
-        'onPress': () {
-          Navigator.popUntil(context, ModalRoute.withName(ThemeRoute.chats));
-        },
+        'onPress': () =>
+            Navigator.popUntil(context, ModalRoute.withName(ThemeRoute.chats)),
       },
       {
         'text': 'People',
         'iconData': Icons.people,
-        'onPress': () {},
+        'onPress': () {
+          if (current != 1) {
+            Navigator.pushNamed(context, ThemeRoute.people);
+          }
+        },
       },
       {
         'text': 'Calls',

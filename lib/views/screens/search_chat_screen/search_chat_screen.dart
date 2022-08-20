@@ -1,4 +1,3 @@
-import 'package:chat_light_dark/views/screens/search_chat_screen/components/body_chats.dart';
 import 'package:flutter/material.dart';
 
 import 'components/app_bar.dart';
@@ -14,14 +13,7 @@ class SearchChatScreen extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: appBarSearchScreen(context),
-        body: const TabBarView(
-          children: [
-            BodyChatOfSearchScreen(),
-            BodySearchScreen(),
-            BodySearchScreen(),
-            BodySearchScreen(),
-          ],
-        ),
+        body: const BodySearchChatScreen(),
       ),
     );
   }

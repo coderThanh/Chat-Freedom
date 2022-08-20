@@ -1,5 +1,6 @@
-import 'package:chat_light_dark/views/widgets/check_condition_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'check_condition_widget.dart';
 
 class InputColor extends StatefulWidget {
   const InputColor({

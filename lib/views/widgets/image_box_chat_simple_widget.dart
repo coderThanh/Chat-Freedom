@@ -1,8 +1,8 @@
-import 'package:chat_light_dark/views/widgets/check_condition_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/chat.dart';
 import '../../models/theme_route.dart';
+import 'check_condition_widget.dart';
 
 class ImageBoxChatSimgle extends StatelessWidget {
   const ImageBoxChatSimgle({

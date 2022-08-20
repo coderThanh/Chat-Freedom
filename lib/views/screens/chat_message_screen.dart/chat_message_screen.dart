@@ -15,7 +15,7 @@ class ChatMessageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Chat chat = args?['chat'];
+    final dynamic chat = (args?['chat'] != null) ? args!['chat'] as Chat : null;
 
     return Scaffold(
       appBar: appBarChatMessage(context, chat: chat),

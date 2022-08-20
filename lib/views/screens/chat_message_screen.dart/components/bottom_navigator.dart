@@ -1,8 +1,8 @@
-import 'package:chat_light_dark/views/widgets/input_color_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../models/theme_const.dart';
 import '../../../widgets/button_icon_text_widget.dart';
+import '../../../widgets/input_color_widget.dart';
 
 class BottomNavigatorChatMessageDetail extends StatelessWidget {
   const BottomNavigatorChatMessageDetail({
