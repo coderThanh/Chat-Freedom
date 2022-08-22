@@ -1,3 +1,4 @@
+import 'package:chat_light_dark/views/screens/calls_screen/calls_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../views/screens/chat_message_screen.dart/middleware_chat_message.dart';
@@ -24,6 +25,7 @@ class ThemeRoute {
   static String search = '/search';
   static String conversation = '/conversation';
   static String people = '/people';
+  static String calls = '/calls';
 
   static Map<String, WidgetBuilder> routes = {
     welcome: (context) => const WelcomeScreen(),
@@ -37,5 +39,6 @@ class ThemeRoute {
     search: (context) => const SearchChatScreen(),
     conversation: (context) => const MiddleWareConverStaionScreen(),
     people: (context) => const PeopleScreen(),
+    calls: (context) => const CallsScreen(),
   };
 }

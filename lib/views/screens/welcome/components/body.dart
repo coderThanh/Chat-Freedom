@@ -36,6 +36,10 @@ class Body extends StatelessWidget {
                   iconData: Icons.navigate_next_outlined,
                   iconReverse: true,
                   height: ThemeConst.inputHeight,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: ThemeConst.padding,
+                    vertical: ThemeConst.padding * 0.5,
+                  ),
                   textSize: 16,
                   onPress: () {
                     Navigator.pushNamedAndRemoveUntil(

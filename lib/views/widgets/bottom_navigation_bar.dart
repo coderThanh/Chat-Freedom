@@ -26,14 +26,20 @@ class BottomNavigationMainTheme extends StatelessWidget {
         'iconData': Icons.people,
         'onPress': () {
           if (current != 1) {
-            Navigator.pushNamed(context, ThemeRoute.people);
+            Navigator.pushNamedAndRemoveUntil(context, ThemeRoute.people,
+                ModalRoute.withName(ThemeRoute.chats));
           }
         },
       },
       {
         'text': 'Calls',
         'iconData': Icons.call,
-        'onPress': () {},
+        'onPress': () {
+          if (current != 2) {
+            Navigator.pushNamedAndRemoveUntil(context, ThemeRoute.calls,
+                ModalRoute.withName(ThemeRoute.chats));
+          }
+        },
       },
       {
         'text': 'Profile',
