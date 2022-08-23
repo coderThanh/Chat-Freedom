@@ -44,7 +44,12 @@ class BottomNavigationMainTheme extends StatelessWidget {
       {
         'text': 'Profile',
         'iconData': Icons.manage_accounts,
-        'onPress': () {},
+        'onPress': () {
+          if (current != 3) {
+            Navigator.pushNamedAndRemoveUntil(context, ThemeRoute.profile,
+                ModalRoute.withName(ThemeRoute.chats));
+          }
+        },
       },
     ];
 
