@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../models/chat.dart';
 import '../../../../models/theme_const.dart';
+import '../../../../models/theme_route.dart';
 import '../../../widgets/avatar_setting_widget.dart';
 import '../../../widgets/button_icon_text_widget.dart';
 import 'body_detail_info.dart';
@@ -29,6 +30,8 @@ class BodyProFile extends StatelessWidget {
           children: [
             AvatarSetting(
               image: demoChatsData[0].image,
+              onPress: () =>
+                  Navigator.pushNamed(context, ThemeRoute.profileEdit),
             ),
             // Name
             Padding(
@@ -44,22 +47,10 @@ class BodyProFile extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            const BodyProfileInfo(
-              title: 'User Id',
-              value: '@annete.me',
-            ),
-            const BodyProfileInfo(
-              title: 'Location',
-              value: 'New York, NYC',
-            ),
-            const BodyProfileInfo(
-              title: 'Phone',
-              value: '(254) 00 112  34',
-            ),
-            const BodyProfileInfo(
-              title: 'Email',
-              value: 'demo@agmail.com',
-            ),
+            const BodyProfileInfo(title: 'User Id', value: '@annete.me'),
+            const BodyProfileInfo(title: 'Location', value: 'New York, NYC'),
+            const BodyProfileInfo(title: 'Phone', value: '(254) 00 112  34'),
+            const BodyProfileInfo(title: 'Email', value: 'demo@agmail.com'),
             Padding(
               padding: EdgeInsets.only(
                 top: 30.0,
@@ -70,7 +61,8 @@ class BodyProFile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   ButtonIconText(
-                    onPress: () {},
+                    onPress: () =>
+                        Navigator.pushNamed(context, ThemeRoute.profileEdit),
                     text: 'Edit Profile',
                     textColor: Colors.white,
                     background: Theme.of(context).primaryColor,

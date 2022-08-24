@@ -1,7 +1,7 @@
-import 'package:chat_light_dark/models/theme_const.dart';
 import 'package:flutter/material.dart';
 
 import 'theme_color.dart';
+import 'theme_const.dart';
 import 'theme_text.dart';
 
 ThemeData themeDataLight(BuildContext context) {
@@ -9,6 +9,7 @@ ThemeData themeDataLight(BuildContext context) {
     shadowColor: ThemeColor.shadown,
     backgroundColor: ThemeColor.background,
     scaffoldBackgroundColor: ThemeColor.background,
+    brightness: Brightness.light,
     appBarTheme: appBarTheme(),
     primaryColor: ThemeColor.primary,
     splashColor: ThemeColor.splash,
@@ -39,6 +40,7 @@ ThemeData themeDataDark(BuildContext context) {
     shadowColor: ThemeColorDark.shadown,
     scaffoldBackgroundColor: ThemeColorDark.background,
     backgroundColor: ThemeColorDark.background,
+    brightness: Brightness.dark,
     appBarTheme: appBarTheme(),
     primaryColor: ThemeColorDark.primary,
     splashColor: ThemeColorDark.splash,

@@ -4,6 +4,7 @@ import '../views/screens/calls_screen/calls_screen.dart';
 import '../views/screens/chat_message_screen.dart/middleware_chat_message.dart';
 import '../views/screens/conversation_screen/middleware_conversation_screen.dart';
 import '../views/screens/people_screen/people_screen.dart';
+import '../views/screens/profile_edit_screen/profile_edit_screen.dart';
 import '../views/screens/profile_screen/profile_screen.dart';
 import '../views/screens/search_chat_screen/search_chat_screen.dart';
 import '../views/screens/welcome/welcome_screen.dart';
@@ -28,6 +29,7 @@ class ThemeRoute {
   static String people = '/people';
   static String calls = '/calls';
   static String profile = '/profile';
+  static String profileEdit = '/profile-edit';
 
   static Map<String, WidgetBuilder> routes = {
     welcome: (context) => const WelcomeScreen(),
@@ -43,5 +45,6 @@ class ThemeRoute {
     people: (context) => const PeopleScreen(),
     calls: (context) => const CallsScreen(),
     profile: (context) => const ProfileScreen(),
+    profileEdit: (context) => const ProfileEditScreen(),
   };
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../models/theme_const.dart';
+import '../../../../models/theme_route.dart';
 import '../../../widgets/button_icon_text_widget.dart';
 
 AppBar appBarProfileScreen({required BuildContext context}) {
@@ -39,7 +40,8 @@ AppBar appBarProfileScreen({required BuildContext context}) {
           Padding(
             padding: EdgeInsets.only(right: ThemeConst.padding * 0.5),
             child: ButtonIconText(
-              onPress: () {},
+              onPress: () =>
+                  Navigator.pushNamed(context, ThemeRoute.profileEdit),
               iconData: Icons.settings,
               iconColor: Colors.white,
               iconSize: iconSize * 0.72,

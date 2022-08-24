@@ -22,6 +22,7 @@ AppBar appBarChats(BuildContext context) {
         splashRadius: 22,
         icon: const Icon(
           Icons.open_in_new,
+          color: Colors.white,
         ),
       ),
     ),
@@ -37,6 +38,7 @@ AppBar appBarChats(BuildContext context) {
           icon: const Icon(
             Icons.search,
           ),
+          color: Colors.white,
         ),
       ),
     ],
