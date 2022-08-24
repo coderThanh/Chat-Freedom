@@ -17,7 +17,7 @@ A few resources to get you started if this is your first Flutter project:
 
 A few image demo:
 
-<div><img width="320px" src="assets/git_readme/1-welcome.jpg"><span style="width: 10px;display: inline-block;"></span><img width="320px" src="assets/git_readme/1-welcome-dark.jpg">
+<div><img width="320px" src="assets/git_readme/1-welcome.jpg" class="img-light"><span style="width: 10px;display: inline-block;"></span><img width="320px" src="assets/git_readme/1-welcome-dark.jpg">
 </div>
 
 <div style="height:10px;"></div>
@@ -82,3 +82,9 @@ A few image demo:
 <img width="320px" src="assets/git_readme/14-profile-edit.jpg">
 <span style="width: 10px;display: inline-block;"></span>
 <img width="320px" src="assets/git_readme/14-profile-edit-dark.jpg">
+
+<style>
+    .img-light{
+        border: 1px solid #ececec;
+    }
+</style>
